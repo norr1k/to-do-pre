@@ -38,8 +38,8 @@ function createItem(item) {
 
 
   duplicateButton.addEventListener("click", ()=>{   // кнопка дублирования по клику
-	let itemName = textElement.textContent;
-	let newItem = createItem(itemName);     
+	const itemName = textElement.textContent;
+	const newItem = createItem(itemName);     
 
 	listElement.prepend(newItem); 
 	let items = getTasksFromDOM(); 
@@ -65,8 +65,8 @@ function createItem(item) {
 
 function getTasksFromDOM(){               // берёт список из того что мы видим на сайте
 	
-	let itemsNamesElements = document.querySelectorAll(".to-do__item-text");  
-	let tasks = [];
+	const itemsNamesElements = document.querySelectorAll(".to-do__item-text");  
+	const tasks = [];
 	
 	itemsNamesElements.forEach((element)=>{   
 		tasks.push(element.textContent);
